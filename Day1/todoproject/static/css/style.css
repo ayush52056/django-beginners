@@ -1,0 +1,121 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.todo-item {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.todo-item.completed .todo-title {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.todo-details {
+    /* flex-grow: 1; */
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.todo-description {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.todo-actions .button {
+    margin: 0 5px;
+    padding: 5px 10px;
+}
+
+.todo-actions .complete {
+    background-color: #28a745;
+}
+
+.todo-actions .complete:hover {
+    background-color: #218838;
+}
+
+.todo-actions .delete {
+    background-color: #dc3545;
+}
+
+.todo-actions .delete:hover {
+    background-color: #c82333;
+}
+
+form {
+    text-align: left;
+}
+
+form p {
+    margin: 10px 0;
+}
+
+form button {
+    width: 100%;
+}
+
+.todo-item[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    margin-top: 5px;
+    font-size: 0.8em;
+    z-index: 4;
+}
